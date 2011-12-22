@@ -1,1 +1,3 @@
-Plop
+How to vizualize how two hashtags/words are linked on twitter, using :
+- Jquery (ajax)
+- Topsy API (https://code.google.com/p/otterapi/)
