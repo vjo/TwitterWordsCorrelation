@@ -1,0 +1,70 @@
+html, body {
+    height: auto;
+    height:100%;
+    margin:0;
+    padding:0;
+}
+
+#container {
+    width: 940px;
+    margin: 0 auto;
+    min-height:100%;
+    position:relative;
+}
+ 
+#header h1 {
+    width: 100%;
+    height: 100%;
+    font-size: 5em;
+    color: #D6BDF6;/*#C3A4E2;/*#BFAB8F;*/
+    padding-top: 30px;
+    padding-bottom: 60px;
+    margin: 0;
+}
+
+#body {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 45px; /* height footer */
+}
+
+#footer {
+    width: 100%;
+    height: 40px;
+    color: #AAAAEE;/*#37379B;/*#A1CBEB;/*#8C8CB3;*/
+    font-size: 1em;
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+}
+
+#body input[type="text"] {
+    color: #A1CBEB;/*#AAAAEE;*/
+    display: inline-block;
+    font-size: 35px;/*2.5em;*/
+    height: 40px;
+    margin-bottom: 40px;
+    max-width: 320px;
+    padding: 2px;
+}
+
+#body input[type="button"] {
+    color: #F8FBFD;
+    background-color: #AAAAEE;
+    display: inline-block;
+    border: none;
+    font-size: 35px;/*font-size: 2.5em;*/
+    font-weight: normal;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+    min-width: 180px;
+    text-shadow: 0 1px 1px #4D4D4D;
+    /*padding: 0.1em 20px 0.1em;*/
+    height: 46px;
+    cursor: pointer;
+}
+
+#body input[type="button"]:hover {
+    background-color: #A1CBEB;/*#D6BDF6;/*#C3A4E2;*/
+}

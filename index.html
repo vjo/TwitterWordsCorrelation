@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>correlatize tweet</title>
+
+<link type="text/css" href="css/style.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
+
+<script type="text/javascript">
+jQuery(document).ready(function() {
+    $('#search-button').click(function() {
+        var word1 = $("#search-query1").val();
+        var query1 = word1.replace("#", "%23");
+
+        var word2 = $("#search-query2").val();
+        var query2 = word2.replace("#", "%23");
+
+        var r1 = search(query1, word1, "all");
+        var r2 = search(query2, word2, "all");
+        var r3 = search(query1+"+"+query2, word1+"+"+word2, "all");
+    });
+
+    function search(query, word, time) {
+        $.ajax({
+            url: 'http://otter.topsy.com/searchcount.json?q='+query+'&type=tweet',
+            dataType: 'jsonp',
+            success: function(results){
+                var a = results.response.a; //alltime in the futur use time var to choose
+                $('#results').append(word + " : " + a + "<br/>");
+            }
+        });
+    }
+});
+</script>
+</head>
+
+<body>
+    <div id="container">
+        <div id="header">
+            <h1>Find words correlation in twitter.</h1>
+        </div>
+
+        <div id="body">
+            <input id="search-query1" type="text" name="query"/>
+            <input id="search-query2" type="text" name="query"/>
+            <input type="button" name="search" id="search-button" value="correlatize"/>
+<!--
+        <select class="styled" />
+            <option selected="selected">all time</option>
+            <option>last month</option>
+            <option>last week</option>
+            <option>last 24 hours</option>
+        </select> 
+-->        
+            <div id="results"></div>
+
+        </div>
+        
+        <div id="footer">design by @tossilf &amp; @y3ty</div>
+    </div>
+</body>
+</html>
+
+
