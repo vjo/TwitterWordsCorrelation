@@ -1,3 +1,5 @@
 How to vizualize how two hashtags/words are linked on twitter, using :
 - Jquery (ajax)
 - Topsy API (https://code.google.com/p/otterapi/)
+
+In branch ruby, it's a test using sinatrarb framework.
